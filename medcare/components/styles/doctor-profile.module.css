@@ -1,0 +1,100 @@
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+.profile {
+  display: flex;
+  margin-left: 150px;
+}
+.profile div {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile h1 {
+  font-size: 50px;
+}
+.image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.specialization {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  color: #444;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.reviews {
+  background: #e0e8e0;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: black;
+  margin: 15px 0;
+}
+.reviews li {
+  list-style-type: none;
+}
+
+.availability {
+  display: flex;
+  justify-content: space-between;
+  background: #e0e8e0;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.availability p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.location {
+  font-size: 16px;
+  color: #1c4a2a;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.bookButton {
+  background: white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: 1 px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+.bookButton:hover {
+  background: #1c4a2a;
+  color: white;
+}

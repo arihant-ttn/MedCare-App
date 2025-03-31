@@ -1,0 +1,48 @@
+/* styles/toast.module.css */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #fff;
+    z-index: 9999;
+    animation: slide-in 0.3s ease-out, fade-out 0.5s ease-out 1.5s forwards;
+  }
+  
+  /* Toast types */
+  .success {
+    background-color: #28a745;
+  }
+  
+  .error {
+    background-color: #dc3545;
+  }
+  
+  .info {
+    background-color: #17a2b8;
+  }
+  
+  /* Slide in animation */
+  @keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Fade out animation */
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

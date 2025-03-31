@@ -1,0 +1,204 @@
+.nav-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 20px 60px 20px 60px;
+  align-items: center;
+  width: 100%;
+}
+.link-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 700px;
+}
+.list-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-title {
+  display: flex;
+  justify-content: space-around;
+  /* width: 150px;   */
+  align-items: center;
+  gap: 10px;
+}
+.logo-title h1 {
+  color: #1c4a2a;
+  font-weight: 500;
+  font-size: 28px;
+}
+.buttons {
+  display: flex;
+  width: 220px;
+  justify-content: space-around;
+  align-items: center;
+  gap: 14px;
+
+  /* background-color: aqua; */
+}
+
+.login {
+  width: 100px;
+  height: 40px;
+  padding: 12px 32px 12px 32px;
+  border: 1px solid #e0e8e0;
+  border-radius: 8px;
+  color: black;
+}
+.register {
+  width: 120px;
+  height: 40px;
+  padding: 12px 32px 12px 32px;
+  border-radius: 8px;
+  color: white;
+  background-color: #1c4a2a;
+}
+.frame {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99px;
+  background-color: #1c4a2a;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  /* background-color: black; */
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: aqua;
+  margin: 4px 0;
+  transition: 0.3s;
+  /* z-index: 20; */
+}
+.list-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Opened Hamburger Icon */
+.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.open:nth-child(2) {
+  opacity: 0;
+}
+
+.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    position: relative;
+    width: 100%;
+    background-color: white;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+
+  /* Hide the list and buttons initially */
+  .list-buttons {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 70px; /* Adjusted to avoid overlapping */
+    left: 0;
+    background-color: white;
+    z-index: 10;
+    padding: 10px 0;
+  }
+
+  /* Show when toggled */
+  .list-buttons.show,
+  .link-list.show,
+  .buttons.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+  }
+
+  .list-buttons.show {
+    margin-top: 10px; /* Adjusted for better spacing */
+  }
+
+  .link-list {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .link-list li {
+    width: 100%;
+    padding: 6px 0;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    /* margin-top: 10px; */
+  }
+
+  .buttons button {
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+/* @media (max-width:768px) {
+    .nav-container{
+      width: 768px;
+    }
+  }
+  
+  @media((min-width:769) and (max-width:1024px)) {
+    .nav-container{
+      width: 900px;
+    }
+  }
+  @media (max-width:320px){
+    .nav-container{
+      width:320px  ;
+    }
+  }
+  @media ((min-widht:321px) and (max-width:375px)){
+    .nav-container{
+      width:375px  ;
+    }
+  } */

@@ -1,0 +1,67 @@
+/* Star Rating Container */
+.starRating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+/* Star Styles */
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.2s;
+  margin: 0 3px;
+  user-select: none; /* Prevents text selection */
+}
+
+.filled {
+  color: #ffcc00; /* Yellow for filled stars */
+}
+
+.empty {
+  color: #ccc; /* Grey for unfilled stars */
+}
+
+/* Button Style */
+.submitBtn {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 8px 16px;
+  /* border: none; */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.submitBtn:hover {
+  background-color: #1c4a2a;
+}
+
+.reviews {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.reviews strong {
+  font-size: 18px;
+}
+
+.reviews ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.reviews li {
+  padding: 5px 0;
+}
+
+.reviewForm {
+  margin-top: 20px;
+  text-align: center;
+}

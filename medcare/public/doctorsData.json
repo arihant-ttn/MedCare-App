@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. John Doe",
+    "specialization": "Cardiologist",
+    "experience": 16,
+    "rating": 5,
+    "gender": "Male",
+    "image": "https://via.placeholder.com/80",
+    "description": "Dr. John Doe is a highly experienced cardiologist specializing in heart diseases and preventive care. He has successfully treated numerous patients with cardiovascular conditions. His expertise and patient-friendly approach make him a trusted choice.",
+    "reviews": [
+      "Dr. Doe is amazing! He explained everything clearly and made me feel at ease.",
+      "I had a heart procedure with him, and everything went smoothly. Highly recommend!",
+      "Very knowledgeable and caring. He truly listens to his patients."
+    ],
+    "available_times": {
+      "morning": "9 AM - 1 PM",
+      "evening": "3 PM - 7 PM"
+    },
+    "location": "City Hospital, New York"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Sarah Smith",
+    "specialization": "Dermatologist",
+    "experience": 12,
+    "rating": 4,
+    "gender": "Female",
+    "image": "https://via.placeholder.com/80",
+    "description": "Dr. Sarah Smith is an expert in diagnosing and treating skin-related conditions, including acne, eczema, and cosmetic dermatology. She is well-known for her advanced skincare treatments. Her compassionate care helps patients feel confident in their skin.",
+    "reviews": [
+      "She helped clear my acne in just a few months. I’m so grateful!",
+      "Dr. Smith was very professional and gave me great skincare advice.",
+      "The clinic was clean, and the staff was friendly. Great experience overall!"
+    ],
+    "available_times": {
+      "morning": "9 AM - 1 PM",
+      "evening": "3 PM - 7 PM"
+    },
+    "location": "Skin Care Clinic, Los Angeles"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Michael Brown",
+    "specialization": "Orthopedic",
+    "experience": 8,
+    "rating": 3,
+    "gender": "Male",
+    "image": "https://via.placeholder.com/80",
+    "description": "Dr. Michael Brown specializes in bone and joint disorders, helping patients recover from injuries and chronic pain. He provides expert treatment for fractures, arthritis, and sports injuries. His patient-focused care ensures effective recovery plans.",
+    "reviews": [
+      "Good doctor, but the wait time was a bit long.",
+      "My knee pain improved after his treatment. Highly recommend!",
+      "He is knowledgeable, but I felt rushed during my appointment."
+    ],
+    "available_times": {
+      "morning": "9 AM - 1 PM",
+      "evening": "3 PM - 7 PM"
+    },
+    "location": "Orthopedic Care Center, Chicago"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Lisa Adams",
+    "specialization": "Neurologist",
+    "experience": 2,
+    "rating": 5,
+    "gender": "Female",
+    "image": "https://via.placeholder.com/80",
+    "description": "Dr. Lisa Adams is a skilled neurologist passionate about diagnosing and managing brain and nervous system disorders. She specializes in treating migraines, epilepsy, and movement disorders. Her dedication to research keeps her at the forefront of neurological advancements.",
+    "reviews": [
+      "Dr. Adams diagnosed my condition accurately and started the right treatment.",
+      "She takes time to listen and is very patient with all my concerns.",
+      "I feel much better after following her advice. Excellent neurologist!"
+    ],
+    "available_times": {
+      "morning": "9 AM - 1 PM",
+      "evening": "3 PM - 7 PM"
+    },
+    "location": "Brain & Spine Clinic, San Francisco"
+  },
+  {
+    "id": 5,
+    "name": "Dr. Emily Johnson",
+    "specialization": "Pediatrician",
+    "experience": 10,
+    "rating": 4,
+    "gender": "Female",
+    "image": "https://via.placeholder.com/80",
+    "description": "Dr. Emily Johnson has a deep passion for children's health and wellness. She provides comprehensive care for infants, children, and adolescents. Her warm and caring nature makes children feel comfortable during visits.",
+    "reviews": [
+      "My kids love visiting Dr. Johnson. She’s very gentle and kind!",
+      "She always takes time to answer all my questions.",
+      "Great pediatrician! She made vaccinations stress-free for my child."
+    ],
+    "available_times": {
+      "morning": "9 AM - 1 PM",
+      "evening": "3 PM - 7 PM"
+    },
+    "location": "Children’s Health Center, Miami"
+  },
+  {
+    "id": 6,
+    "name": "Dr. Robert Wilson",
+    "specialization": "General Surgeon",
+    "experience": 15,
+    "rating": 5,
+    "gender": "Male",
+    "image": "https://via.placeholder.com/80",
+    "description": "Dr. Robert Wilson is a highly skilled general surgeon known for performing complex surgeries with precision. His expertise covers abdominal surgeries, emergency procedures, and minimally invasive techniques.",
+    "reviews": [
+      "Dr. Wilson saved my life with a successful surgery.",
+      "Great surgeon with a caring attitude!",
+      "His post-surgery follow-ups were very helpful."
+    ],
+    "available_times": {
+      "morning": "9 AM - 1 PM",
+      "evening": "3 PM - 7 PM"
+    },
+    "location": "City Medical Center, Houston"
+  },
+  {
+    "id": 7,
+    "name": "Dr. Olivia Martinez",
+    "specialization": "Gynecologist",
+    "experience": 7,
+    "rating": 4,
+    "gender": "Female",
+    "image": "https://via.placeholder.com/80",
+    "description": "Dr. Olivia Martinez specializes in women's reproductive health, pregnancy care, and hormonal balance treatments. She is well-loved by her patients for her empathetic approach.",
+    "reviews": [
+      "Dr. Martinez provided excellent prenatal care.",
+      "She made me feel comfortable and answered all my questions.",
+      "Highly recommended for women's health concerns!"
+    ],
+    "available_times": {
+      "morning": "9 AM - 1 PM",
+      "evening": "3 PM - 7 PM"
+    },
+    "location": "Women's Health Clinic, Dallas"
+  },
+  {
+    "id": 8,
+    "name": "Dr. William Anderson",
+    "specialization": "ENT Specialist",
+    "experience": 5,
+    "rating": 3,
+    "gender": "Male",
+    "image": "https://via.placeholder.com/80",
+    "description": "Dr. William Anderson is an experienced ENT specialist treating ear, nose, and throat disorders. His expertise includes hearing loss, sinus infections, and voice disorders.",
+    "reviews": [
+      "Dr. Anderson was helpful, but the wait time was a bit long.",
+      "He treated my chronic sinus problem effectively!",
+      "A good doctor, but I felt rushed during the consultation."
+    ],
+    "available_times": {
+      "morning": "9 AM - 1 PM",
+      "evening": "3 PM - 7 PM"
+    },
+    "location": "ENT Care Center, Seattle"
+  },
+  {
+    "id": 9,
+    "name": "Dr. Sophia Thomas",
+    "specialization": "Endocrinologist",
+    "experience": 11,
+    "rating": 5,
+    "gender": "Female",
+    "image": "https://via.placeholder.com/80",
+    "description": "Dr. Sophia Thomas is an endocrinology specialist treating diabetes, thyroid disorders, and hormonal imbalances. She is highly recommended for her personalized treatment plans.",
+    "reviews": [
+      "Dr. Thomas helped me manage my diabetes effectively.",
+      "She is very knowledgeable and explained everything in detail.",
+      "Excellent doctor! She truly cares about her patients."
+    ],
+    "available_times": {
+      "morning": "9 AM - 1 PM",
+      "evening": "3 PM - 7 PM"
+    },
+    "location": "Endocrine Health Center, Boston"
+  },
+  {
+    "id": 10,
+    "name": "Dr. Daniel White",
+    "specialization": "Urologist",
+    "experience": 3,
+    "rating": 4,
+    "gender": "Male",
+    "image": "https://via.placeholder.com/80",
+    "description": "Dr. Daniel White specializes in urinary tract health and male reproductive issues. He is dedicated to providing the best urological care with a patient-first approach.",
+    "reviews": [
+      "He diagnosed my issue quickly and started an effective treatment.",
+      "Dr. White was professional and made me feel comfortable.",
+      "Good doctor, but the clinic was a bit crowded."
+    ],
+    "available_times": {
+      "morning": "9 AM - 1 PM",
+      "evening": "3 PM - 7 PM"
+    },
+    "location": "Urology Care Center, Denver"
+  },
+  {
+    "id": 11,
+    "name": "Dr. Isabella Garcia",
+    "specialization": "Oncologist",
+    "experience": 9,
+    "rating": 5,
+    "gender": "Female",
+    "image": "https://via.placeholder.com/80",
+    "description": "Dr. Isabella Garcia is an oncologist dedicated to providing advanced cancer treatments and compassionate care. She specializes in chemotherapy and radiation therapy.",
+    "reviews": [
+      "Dr. Garcia was very supportive throughout my cancer treatment.",
+      "She explained every step clearly and helped me stay positive.",
+      "A life-saving doctor with a kind heart!"
+    ],
+    "available_times": {
+      "morning": "9 AM - 1 PM",
+      "evening": "3 PM - 7 PM"
+    },
+    "location": "Cancer Treatment Center, Philadelphia"
+  },
+  {
+    "id": 12,
+    "name": "Dr. James Hall",
+    "specialization": "Pulmonologist",
+    "experience": 6,
+    "rating": 3,
+    "gender": "Male",
+    "image": "https://via.placeholder.com/80",
+    "description": "Dr. James Hall is a pulmonologist treating lung-related diseases such as asthma, COPD, and respiratory infections. His expertise helps patients breathe easier.",
+    "reviews": [
+      "Good doctor, but the consultation felt a bit rushed.",
+      "He diagnosed my lung condition accurately and prescribed the right medication.",
+      "Friendly and professional, but the appointment scheduling could be better."
+    ],
+    "available_times": {
+      "morning": "9 AM - 1 PM",
+      "evening": "3 PM - 7 PM"
+    },
+    "location": "Lung Health Clinic, Atlanta"
+  }
+]

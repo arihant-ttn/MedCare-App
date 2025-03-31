@@ -1,0 +1,32 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 15px 20px;
+    background: white; /* Dark background */
+    color: #8c8c8c;
+    font-size: 1rem;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .icon:hover {
+    color: #25d366; 
+  }
+  
+  @media (max-width: 768px){
+    .footer{
+      font-size: 0.5em;
+    }
+  }

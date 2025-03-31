@@ -1,0 +1,97 @@
+/* General form container styles */
+.add-doctor-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Label Styles */
+  .add-doctor-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  /* Input and Select Styles */
+  .add-doctor-form input,
+  .add-doctor-form select,
+  .add-doctor-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  /* Focus styles */
+  .add-doctor-form input:focus,
+  .add-doctor-form select:focus,
+  .add-doctor-form textarea:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+  
+  /* Textarea height adjustment */
+  .add-doctor-form textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  /* File input styles */
+  .add-doctor-form input[type="file"] {
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  /* Button Styles */
+  .add-doctor-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-doctor-form button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .add-doctor-form button:hover:not(:disabled) {
+    background-color: #45a049;
+  }
+  
+  /* Error and success messages */
+  .add-doctor-form .error {
+    color: #f44336;
+    font-size: 14px;
+    margin-top: -8px;
+    margin-bottom: 16px;
+  }
+  
+  .add-doctor-form .success {
+    color: #4caf50;
+    font-size: 14px;
+    margin-top: -8px;
+    margin-bottom: 16px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .add-doctor-form {
+      padding: 15px;
+      width: 90%;
+    }
+  }
+  

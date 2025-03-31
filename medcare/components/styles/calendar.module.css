@@ -1,0 +1,116 @@
+.container {
+    /* width: 100%; */
+    /* max-width: 64rem; max-w-4xl */
+  }
+  
+  .nav-container {
+    display: flex;
+  
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+  
+    margin-bottom: 0.5rem;
+  } 
+  
+  .nav-button {
+    /* padding: 0.5rem; p-2 */
+    /* border-radius: 9999px; rounded-full */
+    border-radius: 50% ;
+    background-color: white;
+    /* cursor: pointer; */
+    /* transition: background-color 0.2s;    */
+  }
+  
+  .nav-button:hover {
+    background-color: grey; /* hover:bg-gray-200 */
+  }
+  
+  .month-title {
+    font-size: 0.8rem; /* text-xl */
+    font-weight: 400; /* font-medium */
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
+  
+  /* Date slider container */
+  .slider-container {
+    position: relative;
+    display: flex;
+  }
+  
+  .slider {
+    display: flex;
+    overflow-x: hidden;
+  }
+  
+  /* Individual date cell */
+  .date-cell {
+    /* width: 2rem; */
+    width: 40rem;
+    padding-left: 1rem;
+    padding-right: 1rem; 
+    margin: 0.1rem;
+    /* margin: 0.25rem; m-1 */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black; /* border */
+    border-radius: 5px; /* rounded-md */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .date-cell:hover {
+    background-color: #f9fafb; /* hover:bg-gray-100 */
+  }
+  
+  .selected-date {
+    background-color: #065f46; /* bg-green-800 */
+    color: #ffffff; /* text-white */
+  }
+  
+  /* Date typography */
+  .date-day {
+    font-weight: 300; /* font-medium */
+    font-size: 0.8rem;
+  }
+  
+  .date-number {
+    font-size: 0.8rem; /* text-2xl */
+  }
+  
+  .date-month {
+    font-size: 0.8rem; /* text-sm */
+  }
+  
+  /* Right navigation button */
+  .next-week-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff; /* bg-white */
+    border-radius: 9999px; /* rounded-full */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+    /* padding: 0.5rem; p-2 */
+    cursor: pointer;
+  }
+  .prev-week-button {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff; /* bg-white */
+    border-radius: 9999px; /* rounded-full */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+    /* padding: 0.5rem; p-2 */
+    cursor: pointer;
+  }
+.number-month{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.2rem;
+}
+  

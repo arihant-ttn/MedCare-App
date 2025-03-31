@@ -1,0 +1,54 @@
+.dashboardContainer {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .dashboardContainer h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* 👇 Add a wrapper class for the table */
+  .tableContainer table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+  }
+  
+  .tableContainer th,
+  .tableContainer td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .tableContainer th {
+    background-color: #1C4A2A;
+    color: white;
+  }
+  
+  .approveBtn {
+    background-color: #28a745;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .declineBtn {
+    background-color: #dc3545;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+
+  

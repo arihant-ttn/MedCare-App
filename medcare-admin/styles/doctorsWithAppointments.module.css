@@ -1,0 +1,97 @@
+.header{
+    border-radius:2px;
+    color: white;
+    background-color: #1C4A2A;
+    width: 100%;
+    font-size:32px;
+    text-align: center;
+    padding: 10px;
+}
+  /* Doctor Cards */
+  .doctorsList {
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    width: 100%;
+        
+  }
+  .container h1{
+    text-align: center;
+    padding: 20px;
+    
+  }
+  
+  
+  .card {
+    
+    width: 30%;
+    background: #F8FCF9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    height: 60%;
+    font-size: 16px;
+    margin: 20px;
+    
+  }
+  .rateSpecial{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 10px;
+    align-items: center;
+    width: 100%;
+  }
+  .rateSpecial p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card .image {
+    border-radius: 50%;
+  }
+  
+  
+  .bookBtn {
+    width: 100%;
+    height: 70%;
+    color: black;
+    /* margin-top: 30px; */
+    padding: 10px;
+    /* border: none; */
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #F8FCF9;
+    transition: 0.3s;
+    margin-top: 40px;
+  }
+  
+  .bookBtn:hover {
+    background: #0056b3;
+  }
+  
+  .noResults {
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+    margin-top: 20px;
+  }
+  
+ 
