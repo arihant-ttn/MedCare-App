@@ -58,11 +58,13 @@ const CalendarSlider: React.FC<CalendarSliderProps> = ({
   };
   
   const handleDateSelect = (date: Date): void => {
+    if (isDateDisabled(date)) return; // Prevent selecting disabled dates
     setSelectedDate(date);
     if (onDateSelect) {
       onDateSelect(date);
     }
   };
+  
   
   const isSelectedDate = (date: Date): boolean => {
     return date.toDateString() === selectedDate.toDateString();
@@ -71,6 +73,12 @@ const CalendarSlider: React.FC<CalendarSliderProps> = ({
   const formatMonth = (date: Date): string => {
     return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
   };
+  const isDateDisabled = (date: Date): boolean => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Set time to start of day for accurate comparison
+    return date < today;
+  };
+  
   
   return (
     <div className={styles.container}>
@@ -97,29 +105,28 @@ const CalendarSlider: React.FC<CalendarSliderProps> = ({
   <div className={styles["slider-container"]}>
     <div ref={sliderRef} className={styles.slider}>
       {visibleDates.map((date, index) => (
-        <div 
-          key={index}
-          onClick={() => handleDateSelect(date)}
-          className={`${styles["date-cell"]} ${
-            isSelectedDate(date) ? styles["selected-date"] : ''
-          }`}
-          aria-selected={isSelectedDate(date)}
-          role="gridcell"
-        >
-          <div className={styles["date-day-number-month"]}>
+        <div
+        key={index}
+        onClick={() => handleDateSelect(date)}
+        className={`${styles["date-cell"]} ${
+          isSelectedDate(date) ? styles["selected-date"] : ""
+        } ${isDateDisabled(date) ? styles["disabled-date"] : ""}`} // Add disabled class
+        aria-selected={isSelectedDate(date)}
+        role="gridcell"
+      >
+        <div className={styles["date-day-number-month"]}>
           <div className={styles["date-day"]}>
-            {date.toLocaleDateString('en-US', { weekday: 'short' })}
+            {date.toLocaleDateString("en-US", { weekday: "short" })}
           </div>
           <div className={styles["number-month"]}>
-          <div className={styles["date-number"]}>
-            {date.getDate()}
-          </div>
-          <div className={styles["date-month"]}>
-            {date.toLocaleDateString('en-US', { month: 'short' })}
-          </div>
-          </div>
+            <div className={styles["date-number"]}>{date.getDate()}</div>
+            <div className={styles["date-month"]}>
+              {date.toLocaleDateString("en-US", { month: "short" })}
+            </div>
           </div>
         </div>
+      </div>
+      
       ))}
     </div>
 

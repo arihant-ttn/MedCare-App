@@ -114,3 +114,8 @@
     gap:0.2rem;
 }
   
+.disabled-date {
+  pointer-events: none;
+  opacity: 0.4;
+  cursor: not-allowed;
+}
