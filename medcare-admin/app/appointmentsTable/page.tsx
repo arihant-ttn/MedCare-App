@@ -42,8 +42,14 @@ const DoctorDashboard = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status }),
       });
-
-      const data = await res.json();
+      if (!res.ok) {
+        const errorText = await res.text(); // Get error message if any
+        throw new Error(`Error: ${errorText}`);
+      }
+  
+      const data = res.headers.get("content-length") === "0" ? null : await res.json();
+  
+      // const data = await res.json();
       if (data.success) {
         //  Update status locally without refetching
         setAppointments((prevAppointments) =>
@@ -56,7 +62,7 @@ const DoctorDashboard = () => {
         alert(data.message);
       }
     } catch (error) {
-      console.error(`Error updating status: ${error}`);
+      console.log(`Error updating status: ${error}`);
     }
   };
 
