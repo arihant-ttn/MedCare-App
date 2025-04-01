@@ -5,11 +5,10 @@ import { generateToken } from "../services/jwtService.js";
 import { handleGoogleCallback,authenticateGoogle } from "../services/login.js";
 const router = express.Router();
 
-// JWT Secret Key (use env variable in production)
-const JWT_SECRET = process.env.JWT_SECRET; // Change for production
+const JWT_SECRET = process.env.JWT_SECRET; 
 
 router.post("/login", (req, res, next) => {
-  console.log("POST /login hit");
+  // console.log("POST /login hit");
 
   passport.authenticate("local", async (err, user, info) => {
     console.log("Authentication hit:", user);
@@ -25,9 +24,9 @@ router.post("/login", (req, res, next) => {
       // Generate JWT Token after successful login
       const payload = { id: user.user_id, email: user.email };
       const token = jwt.sign(payload, JWT_SECRET, { expiresIn: "1h" });
-      console.log(token)
+      // console.log(token)
       console.log("Token generated successfully");
-      console.log(payload.id);
+      // console.log(payload.id);
       // Send token to the client
       return res.status(200).json({
         message: "Login Successful",
@@ -50,19 +49,4 @@ router.post("/login", (req, res, next) => {
   export const googleAuth = authenticateGoogle;
   export const googleAuthCallback = handleGoogleCallback
 
-  //  Logout Route
-  router.get("/logout", (req, res) => {
-    req.logout((err) => {
-      if (err) {
-        console.error("Logout error:", err);
-        return res.status(500).json({ success: false, message: "Logout failed" });
-      }
-  
-      //  Destroy session and redirect to login
-      req.session.destroy(() => {
-        res.redirect("http://localhost:3001/login");
-      });
-    });
-  });
-  
 export default router;

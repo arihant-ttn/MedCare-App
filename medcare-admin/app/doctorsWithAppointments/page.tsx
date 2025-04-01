@@ -21,7 +21,7 @@ const Page = () => {
   const router = useRouter();
   const [doctors, setDoctors] = useState<Doctor[]>([]);
 
-  // ✅ Fetch Doctors on Page Load
+  //  Fetch Doctors on Page Load
   const fetchDoctors = async () => {
     try {
       const res = await fetch("http://localhost:3000/doctorsWithAppointments");
@@ -38,7 +38,7 @@ const Page = () => {
     }
   };
 
-  // 🎯 Fetch on Component Mount
+  //  Fetch on Component Mount
   useEffect(() => {
     fetchDoctors();
   }, []);

@@ -103,6 +103,7 @@
     transform: translateY(-50%);
     background-color: #ffffff; /* bg-white */
     border-radius: 9999px; /* rounded-full */
+    /* border: none; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
     /* padding: 0.5rem; p-2 */
     cursor: pointer;

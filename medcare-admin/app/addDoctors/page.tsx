@@ -3,7 +3,7 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import styles from "../../styles/addDoctor.module.css";
-import CustomToast from "@/components/toast";
+import CustomToast from "@/components/customToast";
 interface DoctorFormData {
   name: string;
   specialization: string;
@@ -30,6 +30,10 @@ const AddDoctorForm: React.FC = () => {
     reviews: "",
   });
   const API_URL = "http://localhost:3000/manageDoctors";
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [toastType, setToastType] = useState<"success" | "error" | "info">(
+    "info"
+  );
 
   //  Add Doctor API using fetch
   const addDoctor = async (formData: DoctorFormData) => {
@@ -80,7 +84,7 @@ const AddDoctorForm: React.FC = () => {
     if (type === "file" && files) {
       setFormData({ ...formData, [name]: files[0] });
     }
-    // Handle array fields separately (diseases and reviews)
+    
     // Default handling for other fields
     else {
       setFormData({ ...formData, [name]: value });
@@ -97,10 +101,9 @@ const AddDoctorForm: React.FC = () => {
       await addDoctor(formData);
       setLoading(false);
 
-      <CustomToast message="Doctor Added Successfully" type="success" />;
-      //  Prepare the form data for submission as FormData
-
-      // alert("Doctor added successfully!");
+        // alert("Doctor added successfully!");
+      setToastMessage("Doctor Added Successfully");
+      setToastType("success");
 
       router.push("/allDoctors");
 
@@ -129,6 +132,8 @@ const AddDoctorForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit} className={styles["add-doctor-form"]}>
       {/* Doctor Name */}
+    {toastMessage && <CustomToast message={toastMessage} type={toastType} />}
+
       <label htmlFor="name">Doctor Name:</label>
       <input
         type="text"

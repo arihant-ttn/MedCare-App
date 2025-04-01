@@ -18,7 +18,7 @@ const Login = () => {
     email: "",
     password: "",
   });
-
+  const [isGoogleLoggedIn,setIsGoogleLoggedIn]= useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [toastType, setToastType] = useState<"success" | "error" | "info">(
     "info"
@@ -45,6 +45,8 @@ const Login = () => {
   // ✅ Google Login Handler
   const handleGoogleLogin = () => {
     window.location.href = "http://localhost:3000/google";
+    setIsGoogleLoggedIn(true);
+  
   };
 
   //  Redirect if token exists in Local Storage

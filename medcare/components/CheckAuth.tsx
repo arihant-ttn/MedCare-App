@@ -31,7 +31,6 @@ function CheckAuth() {
   return (
     <div>
       {toastMessage && <CustomToast message={toastMessage} type={toastType} />}
-      {/* {loggedIn && <h1 className="text-green-600 font-semibold">✅ User is logged in!</h1>} */}
     </div>
   );
 }

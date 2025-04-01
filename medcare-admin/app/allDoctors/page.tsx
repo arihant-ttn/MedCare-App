@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/allDoctors.module.css";
 import { useRouter } from "next/navigation";
-
+import CustomToast from "@/components/customToast";
 interface Doctor {
   id: number;
   docid: number;
@@ -20,6 +20,10 @@ interface Doctor {
 const Page = () => {
   const router = useRouter();
   const [doctors, setDoctors] = useState<Doctor[]>([]);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [toastType, setToastType] = useState<"success" | "error" | "info">(
+    "info"
+  );
 
   const deleteDoctor = async (id: number) => {
     console.log(id);
@@ -31,7 +35,9 @@ const Page = () => {
     );
     if (res.ok) {
       setDoctors(doctors.filter((doctor) => doctor.id !== id));
-      alert("Doctor deleted successfully!");
+      setToastMessage("Doctor Deleted");
+      setToastType("success");
+
     } else {
       alert("Failed to delete doctor.");
     }
@@ -65,7 +71,11 @@ const Page = () => {
   }, []);
   console.log(doctors);
   return (
-    <div className={styles["container"]}>
+    
+    <div className={styles["container"]}>   
+     {toastMessage && <CustomToast message={toastMessage} type={toastType} />}
+
+
       <div className={styles["header"]}>Medcare Admin</div>
 
       <h1>Manage Doctors</h1>

@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, ChangeEvent, FormEvent, useEffect } from "react";
-import styles from "../../styles/updateDoctors.module.css"; //  Import External CSS
+import styles from "../../styles/updateDoctors.module.css"; 
 import { useSearchParams } from "next/navigation";
-
+import CustomToast from "@/components/customToast";
 interface Doctor {
   id: string;
   qualification: string;
@@ -17,6 +17,10 @@ interface Doctor {
 const UpdateDoctorForm: React.FC = () => {
   const searchParams = useSearchParams();
   const doctorId = searchParams.get("id");
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [toastType, setToastType] = useState<"success" | "error" | "info">(
+    "info"
+  );
 
   const [formData, setFormData] = useState<Doctor>({
     id: doctorId || "",
@@ -116,7 +120,10 @@ const UpdateDoctorForm: React.FC = () => {
 
       const result = await res.json();
       if (result.success) {
-        alert("Doctor updated successfully!");
+        // alert("Doctor updated successfully!");
+        setToastMessage("Doctor Updated Successfully");
+        setToastType("success");
+
       } else {
         alert("Error updating doctor");
       }
@@ -127,6 +134,8 @@ const UpdateDoctorForm: React.FC = () => {
 
   return (
     <div className={styles.container}>
+          {toastMessage && <CustomToast message={toastMessage} type={toastType} />}
+
       <h2 className={styles.title}>Update Doctor Details</h2>
 
       <form onSubmit={handleSubmit} className={styles.form}>

@@ -1,90 +1,89 @@
 /* Container */
 .container {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Title */
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  /* Form Styles */
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .formGroup {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Label */
-  .label {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 5px;
-  }
-  
-  /* Input and Textarea */
-  .input,
-  .textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    transition: border 0.3s ease;
-  }
-  
-  .input:focus,
-  .textarea:focus {
-    border-color: #4f46e5;
-  }
-  
-  /* Textarea Styles */
-  .textarea {
-    resize: none;
-    height: 100px;
-  }
-  
-  /* File Input */
-  .formGroup input[type="file"] {
-    padding: 5px;
-  }
-  
-  /* Image Preview */
-  .imagePreview {
-    width: 100px;
-    height: 100px;
-    margin-top: 10px;
-    border-radius: 8px;
-    object-fit: cover;
-    border: 1px solid #ddd;
-  }
-  
-  /* Submit Button */
-  .submitBtn {
-    background-color: #4f46e5;
-    color: #fff;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submitBtn:hover {
-    background-color: #4338ca;
-  }
-  
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label */
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Input and Textarea */
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #4f46e5;
+}
+
+/* Textarea Styles */
+.textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* File Input */
+.formGroup input[type="file"] {
+  padding: 5px;
+}
+
+/* Image Preview */
+.imagePreview {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+/* Submit Button */
+.submitBtn {
+  background-color: #4f46e5;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #4338ca;
+}

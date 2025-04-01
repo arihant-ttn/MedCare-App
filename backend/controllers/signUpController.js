@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post("/", async (req, res) => {
     try {
-      console.log("controller",req.body);
+      // console.log("controller",req.body);
       const response = await signUpUser(req.body);
       console.log(response);
       if(response.status==409){

@@ -6,11 +6,10 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./styles/navbar.module.css";
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
-  const [loggingIn, setLoggingIn] = useState(true); //  Prevent initial flicker
+  const [loggingIn, setLoggingIn] = useState(true); 
   const router = useRouter();
   const pathname = usePathname();
 

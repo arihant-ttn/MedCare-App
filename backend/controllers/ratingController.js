@@ -11,7 +11,7 @@ router.post('/updateRating', async (req, res) => {
   try {
     const { doctorId, rating } = req.body;
 
-    // 🔎 Validate input
+    //  Validate input
     if (!doctorId || !rating || rating < 1 || rating > 5) {
       return res.status(400).json({ error: "Doctor ID and valid rating are required" });
     }

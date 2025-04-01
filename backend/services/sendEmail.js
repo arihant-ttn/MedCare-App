@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 import ejs from "ejs";
 import path from "path";
 
-// ✅ Create Transporter for Gmail SMTP
+//  Create Transporter for Gmail SMTP
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// ✅ Send Email Function
+//  Send Email Function
 export const sendEmail = async (to, subject, template, data) => {
   try {
     //  Define Path to EJS Template
@@ -31,9 +31,9 @@ export const sendEmail = async (to, subject, template, data) => {
 
     //  Send Email
     const info = await transporter.sendMail(mailOptions);
-    console.log(`✅ Email sent to ${to}: ${info.response}`);
+    console.log(` Email sent to ${to}: ${info.response}`);
   } catch (error) {
-    console.error("❌ Error sending email:", error);
+    console.error(" Error sending email:", error);
     throw new Error("Failed to send email.");
   }
 };

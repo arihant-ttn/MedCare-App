@@ -90,6 +90,7 @@ const CalendarSlider: React.FC<CalendarSliderProps> = ({
       aria-label="Previous month"
     >
       <ChevronLeft size={18} />
+      
     </button>
     <h2 className={styles['month-title']}>{formatMonth(currentMonth)}</h2>
     <button 

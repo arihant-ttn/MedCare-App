@@ -79,7 +79,7 @@ const MainSection = () => {
 
   //  Handle Slot Selection
   const handleSlotSelection = (shift: string, slotTime: string) => {
-    console.log(`Selected Shift: ${shift}, Slot: ${slotTime}`);
+    // console.log(`Selected Shift: ${shift}, Slot: ${slotTime}`);
     setSelectedShift(shift);
     setSlot(slotTime);
   };
@@ -100,7 +100,7 @@ const MainSection = () => {
   const handleDateSelection = (date: string) => {
     const formattedDate = new Date(date).toISOString().split("T")[0];
     setSelectedDate(formattedDate);
-    console.log("selected Date", selectedDate);
+    // console.log("selected Date", selectedDate);
   };
 
   //  Send Data to Backend on Submit

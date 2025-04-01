@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "../../../components/styles/doctor-profile.module.css";
 import BookBtn from "@/components/BookBtn";
-// import CheckAuth from "@/components/CheckAuth";
+
 import ReviewSection from "@/components/reviews";
 interface Doctor {
   id: number;

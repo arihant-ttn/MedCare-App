@@ -13,13 +13,11 @@ import ratingController from '../controllers/ratingController.js';
 const router=express.Router();
 
 router.use('/manageDoctors',manageDoctor);
-// router.use("/", fetchAppointmentsByDoctor);
 
-// router.use('/doctorsWithAppointments',doctorsWithAppointments);
 router.use('/',updateStatus);
 
 router.use('/',ratingController);
-// router.use('/get-appointments',getAllAppointments);
+
 router.use('/listDoctors',doctorsListController);
 
 router.get('/google',(req, res, next)=>{console.log('inside /google'); next();},googleAuth);

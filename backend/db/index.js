@@ -5,7 +5,7 @@ const { Pool } = pkg;
 const sql_pool=new Pool({
     user:config.dbUser,
     database:config.databsase,
-    password:config.dbPassword,
+    password:config.dbPassword, 
     port:config.dbPort,
     idleTimeoutMillis:config.idleTimeoutMillis,
     connectionTimeoutMillis:config.connectionTimeoutMillis
