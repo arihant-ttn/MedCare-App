@@ -35,7 +35,6 @@ const MainSection = () => {
   );
 
   //  Fetch Booked Slots from Backend
-  //  Correctly Format Date as YYYY-MM-DD
   const fetchBookedSlots = async (date: string) => {
     if (!docId || !date) return;
 

@@ -65,7 +65,7 @@ export const deleteDoctor = async (req, res) => {
 
     // Delete record from database
     await pool.query("DELETE FROM doctors WHERE id = $1;", [id]);
-
+    
     res.status(200).json({ success: true, message: "Doctor deleted successfully" });
   } catch (error) {
     console.error("Error deleting doctor:", error);

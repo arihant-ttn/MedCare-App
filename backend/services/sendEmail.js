@@ -3,22 +3,29 @@ import ejs from "ejs";
 import path from "path";
 
 //  Create Transporter for Gmail SMTP
-const transporter = nodemailer.createTransport({
+
+const transporter = nodemailer.createTransport(
+  {
+  
   service: "Gmail",
+
   auth: {
     user: process.env.SMTP_EMAIL, // Your Gmail address
-    pass: process.env.SMTP_PASSWORD, // Your 16-character App Password
+    pass: process.env.SMTP_PASSWORD, // 16-character App Password
   },
 });
 
 //  Send Email Function
 export const sendEmail = async (to, subject, template, data) => {
   try {
+    console.log("SMTP_EMAIL:", process.env.SMTP_EMAIL);
+console.log("SMTP_PASSWORD:", process.env.SMTP_PASSWORD);
+
     //  Define Path to EJS Template
     const templatePath = path.join(process.cwd(), "templates", `${template}.ejs`);
 
     //  Render EJS Template with Data
-    console.log("endEmail ", data);
+    // console.log("endEmail ", data);
     const html = await ejs.renderFile(templatePath, data);
 
     //  Email Options

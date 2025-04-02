@@ -9,7 +9,6 @@ import styles from "./styles/navbar.module.css";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
-  const [loggingIn, setLoggingIn] = useState(true); 
   const router = useRouter();
   const pathname = usePathname();
 

@@ -5,7 +5,6 @@ import jwt from "jsonwebtoken";
 import { Strategy as JwtStrategy, ExtractJwt } from "passport-jwt";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 import pool from "../db/index.js";
-import config from "../config/index.js";
 const LocalStrategy = pkg.Strategy;
 
 passport.use(
@@ -50,7 +49,7 @@ export const handleGoogleCallback = (req, res, next) => {
       );
     }
 
-    
+
 
     const token = jwt.sign(
       { id: user.id, email: user.email },

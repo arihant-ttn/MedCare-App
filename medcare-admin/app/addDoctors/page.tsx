@@ -130,9 +130,9 @@ const AddDoctorForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles["add-doctor-form"]}>
+    <><div className={styles["header"]}>Medcare Admin</div><form onSubmit={handleSubmit} className={styles["add-doctor-form"]}>
       {/* Doctor Name */}
-    {toastMessage && <CustomToast message={toastMessage} type={toastType} />}
+      {toastMessage && <CustomToast message={toastMessage} type={toastType} />}
 
       <label htmlFor="name">Doctor Name:</label>
       <input
@@ -142,8 +142,7 @@ const AddDoctorForm: React.FC = () => {
         placeholder="Enter Doctor Name"
         value={formData.name}
         onChange={handleChange}
-        required
-      />
+        required />
 
       {/* Specialization */}
       <label htmlFor="specialization">Specialization:</label>
@@ -154,8 +153,7 @@ const AddDoctorForm: React.FC = () => {
         placeholder="Enter Specialization"
         value={formData.specialization}
         onChange={handleChange}
-        required
-      />
+        required />
 
       {/* Experience */}
       <label htmlFor="experience">Experience (Years):</label>
@@ -166,8 +164,7 @@ const AddDoctorForm: React.FC = () => {
         placeholder="Enter Experience in Years"
         value={formData.experience}
         onChange={handleChange}
-        required
-      />
+        required />
 
       {/* Gender */}
       <label htmlFor="gender">Gender:</label>
@@ -190,8 +187,7 @@ const AddDoctorForm: React.FC = () => {
         placeholder="Enter Qualification"
         value={formData.qualification}
         onChange={handleChange}
-        required
-      />
+        required />
 
       {/* Diseases Treated */}
       <label htmlFor="diseases">Diseases Treated (comma-separated):</label>
@@ -201,8 +197,7 @@ const AddDoctorForm: React.FC = () => {
         id="diseases"
         placeholder="e.g. Diabetes, Hypertension, Skin Problems"
         value={formData.diseases}
-        onChange={handleChange}
-      />
+        onChange={handleChange} />
 
       {/* Description */}
       <label htmlFor="description">Doctor Description:</label>
@@ -211,8 +206,7 @@ const AddDoctorForm: React.FC = () => {
         id="description"
         placeholder="Enter description about the doctor"
         value={formData.description}
-        onChange={handleChange}
-      />
+        onChange={handleChange} />
 
       {/* Reviews */}
       <label htmlFor="reviews">Reviews (comma-separated):</label>
@@ -222,8 +216,7 @@ const AddDoctorForm: React.FC = () => {
         id="reviews"
         placeholder="e.g. Great doctor, Very helpful"
         value={formData.reviews}
-        onChange={handleChange}
-      />
+        onChange={handleChange} />
 
       {/* Image Upload */}
       <label htmlFor="image">Doctor Image:</label>
@@ -233,14 +226,13 @@ const AddDoctorForm: React.FC = () => {
         id="image"
         accept="image/*"
         onChange={handleChange}
-        required
-      />
+        required />
 
       {/* Submit Button */}
       <button type="submit" disabled={loading}>
         {loading ? "Adding Doctor..." : "Add Doctor"}
       </button>
-    </form>
+    </form></>
   );
 };
 

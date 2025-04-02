@@ -52,4 +52,12 @@
   }
   
 
-  
+  .header{
+    border-radius:2px;
+    color: white;
+    background-color: #1C4A2A;
+    width: 100%;
+    font-size:32px;
+    text-align: center;
+    padding: 10px;
+}

@@ -18,7 +18,7 @@ const Login = () => {
     email: "",
     password: "",
   });
-  const [isGoogleLoggedIn,setIsGoogleLoggedIn]= useState(false);
+  
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [toastType, setToastType] = useState<"success" | "error" | "info">(
     "info"
@@ -42,10 +42,10 @@ const Login = () => {
   const admin = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
   const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
-  // ✅ Google Login Handler
+  //  Google Login Handler
   const handleGoogleLogin = () => {
     window.location.href = "http://localhost:3000/google";
-    setIsGoogleLoggedIn(true);
+    
   
   };
 
@@ -63,7 +63,7 @@ const Login = () => {
 
     //  Admin Login Check
     if (formData.email === admin && formData.password === adminPassword) {
-      window.open("http://localhost:3002/dashboard", "_blank");
+      window.open("http://localhost:3002", "_blank");
       return;
     }
 

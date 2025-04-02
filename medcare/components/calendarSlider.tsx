@@ -98,7 +98,7 @@ const CalendarSlider: React.FC<CalendarSliderProps> = ({
       className={styles["nav-button"]}
       aria-label="Next month"
     >
-      <ChevronRight size={18} />
+      <ChevronRight size={18}  />
     </button>
   </div>
 
@@ -112,8 +112,8 @@ const CalendarSlider: React.FC<CalendarSliderProps> = ({
         className={`${styles["date-cell"]} ${
           isSelectedDate(date) ? styles["selected-date"] : ""
         } ${isDateDisabled(date) ? styles["disabled-date"] : ""}`} // Add disabled class
-        aria-selected={isSelectedDate(date)}
-        role="gridcell"
+        
+        
       >
         <div className={styles["date-day-number-month"]}>
           <div className={styles["date-day"]}>

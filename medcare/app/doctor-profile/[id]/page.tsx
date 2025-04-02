@@ -1,5 +1,6 @@
-import fs from "fs/promises";
-import path from "path";
+
+
+
 import React from "react";
 import Image from "next/image";
 import styles from "../../../components/styles/doctor-profile.module.css";

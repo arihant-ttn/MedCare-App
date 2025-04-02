@@ -53,7 +53,7 @@ const Page = () => {
             <div key={doctor.id} className={styles.card}>
               <div>
                 <Image
-                  src="/Frame.png"
+                  src={doctor.image}
                   alt={doctor.name}
                   width={100}
                   height={100}

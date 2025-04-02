@@ -133,8 +133,8 @@ const UpdateDoctorForm: React.FC = () => {
   };
 
   return (
-    <div className={styles.container}>
-          {toastMessage && <CustomToast message={toastMessage} type={toastType} />}
+    <><div className={styles["header"]}>Medcare Admin</div><div className={styles.container}>
+      {toastMessage && <CustomToast message={toastMessage} type={toastType} />}
 
       <h2 className={styles.title}>Update Doctor Details</h2>
 
@@ -147,8 +147,7 @@ const UpdateDoctorForm: React.FC = () => {
             name="qualification"
             value={formData.qualification}
             onChange={handleChange}
-            className={styles.input}
-          />
+            className={styles.input} />
         </div>
 
         {/* Diseases */}
@@ -159,8 +158,7 @@ const UpdateDoctorForm: React.FC = () => {
             name="diseases"
             value={formData.diseases} // No array handling
             onChange={handleChange}
-            className={styles.input}
-          />
+            className={styles.input} />
         </div>
 
         {/* Rating */}
@@ -173,8 +171,7 @@ const UpdateDoctorForm: React.FC = () => {
             min="0"
             max="5"
             onChange={handleChange}
-            className={styles.input}
-          />
+            className={styles.input} />
         </div>
 
         {/* Description */}
@@ -185,8 +182,7 @@ const UpdateDoctorForm: React.FC = () => {
             value={formData.description}
             onChange={handleChange}
             rows={3}
-            className={styles.textarea}
-          />
+            className={styles.textarea} />
         </div>
 
         {/* Reviews */}
@@ -197,8 +193,7 @@ const UpdateDoctorForm: React.FC = () => {
             name="reviews"
             value={formData.reviews} // No array handling
             onChange={handleChange}
-            className={styles.input}
-          />
+            className={styles.input} />
         </div>
 
         {/* Image Upload */}
@@ -208,14 +203,12 @@ const UpdateDoctorForm: React.FC = () => {
             type="file"
             accept="image/*"
             onChange={handleFileChange}
-            className={styles.input}
-          />
+            className={styles.input} />
           {formData.image && (
             <img
               src={formData.image}
               alt="Doctor"
-              className={styles.imagePreview}
-            />
+              className={styles.imagePreview} />
           )}
         </div>
 
@@ -224,7 +217,7 @@ const UpdateDoctorForm: React.FC = () => {
           Update Doctor
         </button>
       </form>
-    </div>
+    </div></>
   );
 };
 

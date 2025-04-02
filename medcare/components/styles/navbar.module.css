@@ -100,7 +100,7 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .nav-container {
     display: flex;
     justify-content: space-between;

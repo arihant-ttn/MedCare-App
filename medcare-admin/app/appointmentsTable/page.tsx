@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../../styles/appointmentsTable.module.css";
 import { useSearchParams } from "next/navigation";
-
+import CustomToast from "@/components/customToast";
 interface Appointment {
   id: number;
   userid: number;
@@ -22,6 +22,11 @@ const DoctorDashboard = () => {
   const docId = searchParams.get("id");
 
   //  Fetch Appointments
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [toastType, setToastType] = useState<"success" | "error" | "info">(
+    "info"
+  );
+
   const fetchAppointments = async () => {
     try {
       const res = await fetch(`http://localhost:3000/doctor/${docId}`);
@@ -48,7 +53,8 @@ const DoctorDashboard = () => {
       }
   
       const data = res.headers.get("content-length") === "0" ? null : await res.json();
-  
+      setToastMessage("Sending Email");
+      setToastType("info");
       // const data = await res.json();
       if (data.success) {
         //  Update status locally without refetching
@@ -57,9 +63,12 @@ const DoctorDashboard = () => {
             appointment.id === id ? { ...appointment, status } : appointment
           )
         );
+       
+        setToastMessage("Email sent");
+        setToastType("success");
         alert(`Appointment ${status}!`);
       } else {
-        alert(data.message);
+        
       }
     } catch (error) {
       console.log(`Error updating status: ${error}`);
@@ -71,8 +80,11 @@ const DoctorDashboard = () => {
   }, []);
 
   return (
-    <div className={styles.dashboardContainer}>
+    <><div className={styles["header"]}>Medcare Admin</div><div className={styles.dashboardContainer}>
+            {toastMessage && <CustomToast message={toastMessage} type={toastType} />}
+
       <h2>Upcoming Appointments</h2>
+      
       {appointments.length === 0 ? (
         <p>No upcoming appointments.</p>
       ) : (
@@ -101,13 +113,11 @@ const DoctorDashboard = () => {
                   <td>{appointment.selecteddate}</td>
                   <td>
                     <span
-                      className={
-                        appointment.status === "Approved"
-                          ? styles.approvedStatus
-                          : appointment.status === "Declined"
+                      className={appointment.status === "Approved"
+                        ? styles.approvedStatus
+                        : appointment.status === "Declined"
                           ? styles.declinedStatus
-                          : styles.pendingStatus
-                      }
+                          : styles.pendingStatus}
                     >
                       {appointment.status}
                     </span>
@@ -116,17 +126,13 @@ const DoctorDashboard = () => {
                     {appointment.status === "Pending" && (
                       <>
                         <button
-                          onClick={() =>
-                            updateStatus(appointment.id, "Approved")
-                          }
+                          onClick={() => updateStatus(appointment.id, "Approved")}
                           className={styles.approveBtn}
                         >
                           Approve
                         </button>
                         <button
-                          onClick={() =>
-                            updateStatus(appointment.id, "Declined")
-                          }
+                          onClick={() => updateStatus(appointment.id, "Declined")}
                           className={styles.declineBtn}
                         >
                           Decline
@@ -145,7 +151,7 @@ const DoctorDashboard = () => {
           </table>
         </div>
       )}
-    </div>
+    </div></>
   );
 };
 

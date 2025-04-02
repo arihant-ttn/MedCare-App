@@ -9,9 +9,10 @@ import cors from 'cors';
 
 const app = express();
 const server = http.createServer(app);
+const allowedOrigin = ["http://localhost:3001","http://localhost:3002",]
 app.use(
   cors({
-    origin: "*", // Allow requests from any origin
+    origin: allowedOrigin, // Allow requests from any origin
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })

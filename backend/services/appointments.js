@@ -193,8 +193,9 @@ WHERE appointments.id = $1;
     };
 
     // //  Send email
-    // console.log(emailData);
+    console.log(emailData);
     // console.log("response", response);
+    console.log(ans.email)
     await sendEmail(ans.email, subject, emailTemplate, emailData);
 
     return {
@@ -203,7 +204,7 @@ WHERE appointments.id = $1;
     };
   } catch (error) {
     console.error("Error updating status:", error);
-    // res.status(500).json({ error: "Failed to update appointment status." });
+   
   }
 };
 

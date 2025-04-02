@@ -58,32 +58,6 @@ const DoctorsList = () => {
   const [experience, setExperience] = useState<string>("");
   const [rating, setRating] = useState<string>("showAll");
   const [gender, setGender] = useState<string>("showAll");
-
-  //  Fetch Doctors on Page Load & Filter Change
-  useEffect(() => {
-    const filters = {
-      search: searchQuery || undefined,
-      rating: rating !== "showAll" ? rating : undefined,
-      experience: experience || undefined,
-      gender: gender !== "showAll" ? gender : undefined,
-      page: currentPage,
-      limit: doctorsPerPage,
-    };
-  
-    updateURL(); //  Update URL on state change
-  
-    fetchDoctors(filters)
-      .then((data) => {
-        setFilteredDoctors(data.doctors);
-        setTotalDoctors(data.totalDoctors);
-        setDoctors(data.fDoctors);
-      })
-      .catch((error) => {
-        console.error("Error fetching doctors:", error);
-        setFilteredDoctors([]);
-        setTotalDoctors(0);
-      });
-  }, [searchQuery, experience, rating, gender, currentPage]);
   
   useEffect(() => {
     //  Parse URL Query Parameters
@@ -102,7 +76,9 @@ const DoctorsList = () => {
     setRating(ratingValue);
     setGender(genderValue);
     setCurrentPage(pageValue);
+    
   }, []);
+
   const updateURL = () => {
     const queryParams = new URLSearchParams();
   
@@ -116,6 +92,32 @@ const DoctorsList = () => {
     route.push(`?${queryParams.toString()}`);
   };
   
+  //  Fetch Doctors on Page Load & Filter Change
+  useEffect(() => {
+    const filters = {
+      search: searchQuery || undefined,
+      rating: rating !== "showAll" ? rating : undefined,
+      experience: experience || undefined,
+      gender: gender !== "showAll" ? gender : undefined,
+      page: currentPage,
+      limit: doctorsPerPage,
+    };
+  
+    updateURL(); //  Update URL on state change
+     
+    fetchDoctors(filters)
+      .then((data) => {
+        setFilteredDoctors(data.doctors);
+        setTotalDoctors(data.totalDoctors);
+        setDoctors(data.fDoctors);
+      })
+      .catch((error) => {
+        console.error("Error fetching doctors:", error);
+        setFilteredDoctors([]);
+        setTotalDoctors(0);
+      });
+  }, [searchQuery, experience, rating, gender, currentPage]);
+
   //  Handle Input Change
   const handleSearch = (value: string) => {
     setSearch(value); // Only update input value
