@@ -7,7 +7,7 @@ const router = express.Router();
 
 const JWT_SECRET = process.env.JWT_SECRET; 
 
-router.post("/login", (req, res, next) => {
+router.post("/", (req, res, next) => {
   // console.log("POST /login hit");
 
   passport.authenticate("local", async (err, user, info) => {

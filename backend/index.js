@@ -12,9 +12,9 @@ const server = http.createServer(app);
 const allowedOrigin = ["http://localhost:3001","http://localhost:3002",]
 app.use(
   cors({
-    origin: allowedOrigin, // Allow requests from any origin
+    origin: "*", // Allow requests from any origin
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type"],
+    allowedHeaders: ["Content-Type","Authorization"],
   })
 );
 app.use(passport.initialize());

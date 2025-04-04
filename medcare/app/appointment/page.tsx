@@ -27,6 +27,7 @@ const fetchDoctors = async (filters: {
   page?: number;
   limit?: number;
 }) => {
+  const token=localStorage.getItem("token");
   const filteredParams = Object.fromEntries(
     Object.entries(filters).filter(
       ([_, v]) => v !== undefined && v !== "undefined" && v !== ""
@@ -35,7 +36,12 @@ const fetchDoctors = async (filters: {
   const queryParams = new URLSearchParams(filteredParams as any).toString();
   
 
-  const res = await fetch(`http://localhost:3000/listDoctors?${queryParams}`);
+  const res = await fetch(`http://localhost:3000/listDoctors?${queryParams}`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`, // 👈 must be this format
+    },
+  });
 
   if (!res.ok) throw new Error("Failed to fetch doctors");
 
