@@ -24,7 +24,7 @@ const Page = () => {
   //  Fetch Doctors on Page Load
   const fetchDoctors = async () => {
     try {
-      const res = await fetch("http://localhost:3000/doctorsWithAppointments");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/doctorsWithAppointments`);
       console.log(res);
       if (!res.ok) {
         throw new Error("Failed to fetch doctors");

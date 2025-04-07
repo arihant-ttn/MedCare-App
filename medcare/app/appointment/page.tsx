@@ -35,11 +35,12 @@ const fetchDoctors = async (filters: {
   );
   const queryParams = new URLSearchParams(filteredParams as any).toString();
   
+  console.log(process.env.NEXT_PUBLIC_API_BASE_URL);
 
-  const res = await fetch(`http://localhost:3000/listDoctors?${queryParams}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/listDoctors?${queryParams}`, {
     method: 'GET',
     headers: {
-      Authorization: `Bearer ${token}`, // 👈 must be this format
+      Authorization: `Bearer ${token}`, //  must be this format
     },
   });
 

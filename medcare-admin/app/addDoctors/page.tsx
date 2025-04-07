@@ -29,7 +29,7 @@ const AddDoctorForm: React.FC = () => {
     image: null,
     reviews: "",
   });
-  const API_URL = "http://localhost:3000/manageDoctors";
+  const API_URL = `${process.env.NEXT_PUBLIC_API_BASE_URL}/manageDoctors`;
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [toastType, setToastType] = useState<"success" | "error" | "info">(
     "info"

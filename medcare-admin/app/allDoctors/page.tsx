@@ -28,7 +28,7 @@ const Page = () => {
   const deleteDoctor = async (id: number) => {
     console.log(id);
     const res = await fetch(
-      `http://localhost:3000/manageDoctors/delete/${id}`,
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/manageDoctors/delete/${id}`,
       {
         method: "DELETE",
       }
@@ -50,7 +50,7 @@ const Page = () => {
   const fetchDoctors = async () => {
     try {
       const res = await fetch(
-        "http://localhost:3000/manageDoctors/getAllDoctors"
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/manageDoctors/getAllDoctors`
       );
       console.log(res);
       if (!res.ok) {

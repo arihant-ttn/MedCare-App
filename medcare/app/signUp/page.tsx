@@ -35,7 +35,7 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3000/signUp", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/signUp`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json", // Ensure correct content type

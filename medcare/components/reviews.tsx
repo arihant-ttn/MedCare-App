@@ -22,7 +22,7 @@ const ReviewSection = ({ doctorId }: { doctorId: number }) => {
     };
 
     //  Send review to API
-    const res = await fetch("http://localhost:3000/updateRating", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/updateRating`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(reviewData),

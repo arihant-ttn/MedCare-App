@@ -29,7 +29,7 @@ const DoctorDashboard = () => {
 
   const fetchAppointments = async () => {
     try {
-      const res = await fetch(`http://localhost:3000/doctor/${docId}`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/doctor/${docId}`);
       const data = await res.json();
       if (data) {
         setAppointments(data.data);
@@ -42,7 +42,7 @@ const DoctorDashboard = () => {
   //  Update Status Locally in State
   const updateStatus = async (id: number, status: string) => {
     try {
-      const res = await fetch(`http://localhost:3000/updateStatus/${id}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/updateStatus/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status }),

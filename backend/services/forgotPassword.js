@@ -17,7 +17,7 @@ export const forgotPassword = async (req, res) => {
     const user = result.rows[0];
     console.log(user);
     const token = generateToken(user.user_id);
-    const resetLink = `http://localhost:3000/reset-password?token=${token}`;
+    const resetLink = `${process.env.NEXT_PUBLIC_API_BASE_URL}/reset-password?token=${token}`;
 
     // //  Send Reset Link to Email
     await sendEmail(user.email, "Password Reset Request", "resetPassword", {

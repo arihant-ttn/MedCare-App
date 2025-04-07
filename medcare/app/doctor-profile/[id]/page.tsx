@@ -21,7 +21,7 @@ interface Doctor {
 
 const getDoctorsData = async (): Promise<Doctor[]> => {
   
-  const res = await fetch("http://localhost:3000/manageDoctors/getAllDoctors"); 
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/manageDoctors/getAllDoctors`); 
   
   if (!res.ok) throw new Error("Failed to fetch doctors");
   const data= await res.json();

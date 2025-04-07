@@ -44,7 +44,7 @@ const Login = () => {
 
   //  Google Login Handler
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:3000/google";
+    window.location.href = `${process.env.NEXT_PUBLIC_API_BASE_URL}/google`;
     
   
   };
@@ -68,7 +68,7 @@ const Login = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/login", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

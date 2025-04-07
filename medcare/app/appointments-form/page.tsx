@@ -43,7 +43,7 @@ const MainSection = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/get-bookedSlots?doctorId=${docId}&selectedDate=${formattedDate}`
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/get-bookedSlots?doctorId=${docId}&selectedDate=${formattedDate}`
       );
       const data = await res.json();
       console.log(data.data);
@@ -124,7 +124,7 @@ const MainSection = () => {
     // console.log("Sending Data to Backend:", appointmentData);
 
     try {
-      const res = await fetch("http://localhost:3000/appointments", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/appointments`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -33,7 +33,7 @@ const UpdateDoctorForm: React.FC = () => {
   });
 
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const API_URL = "http://localhost:3000/manageDoctors/update";
+  const API_URL =` ${process.env.NEXT_PUBLIC_API_BASE_URL}/manageDoctors/update`;
 
   //  Fetch Doctor Data
   useEffect(() => {
